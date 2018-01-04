@@ -1,0 +1,36 @@
+{
+  "name": "Koinex Watch",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Better way to take a look at the buy and sell price of Koinex",
+  "homepage_url": "http://swrdfish.github.io/koinexwatch",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "src/bg/background.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://koinex.in/exchange/*"],
+      "css": ["css/koinexwatch.css"],
+      "js": ["js/jquery/jquery.js", "src/ct/content.js"] 
+    }
+  ],
+  "permissions" : [
+    "declarativeContent"
+  ],
+  "page_action": {
+    "default_icon": {
+      "16": "icons/icon16.png"
+    },
+    "default_title": "page action demo",
+    "default_popup": "src/page_action/page_action.html"
+  }
+}

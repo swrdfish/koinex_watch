@@ -1,0 +1,10 @@
+#koinexwatch {
+	padding: 5px;
+	padding-left : 25px;
+	background: white;
+	font-weight: bold;
+}
+
+#koinexwatch h4, #koinexwatch h3 {
+	font-family: Menlo, Monaco, Consolas, "Courier New", monospace !important;
+}
